@@ -1,4 +1,3 @@
-````markdown
 # 🚀 DevPulse CLI
 
 ![npm version](https://img.shields.io/npm/v/devpulse-cli-angad?color=blue&style=flat-square)
@@ -24,6 +23,7 @@ You can install DevPulse globally on your machine using npm:
 ```bash
 npm install -g devpulse-cli-angad
 ```
+
 ````
 
 ---
@@ -111,4 +111,5 @@ Building this tool was an incredible journey into bridging the gap between artif
 
 ```
 
-```
+
+````

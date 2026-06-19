@@ -8,6 +8,9 @@ import fs from "fs";
 const program = new Command();
 const ai = new GoogleGenAI({});
 
+// For model flexibility
+const TARGET_MODEL = process.env.GEMINI_MODEL || "gemini-2.5-flash";
+
 program
   .name("devpulse")
   .description("AI-powered developer productivity tool")
@@ -33,7 +36,7 @@ program
 
       // 2. Send to Gemini 2.5 Flash (the fastest model for this task)
       const response = await ai.models.generateContent({
-        model: "gemini-2.5-flash",
+        model: TARGET_MODEL,
         contents: `Write 3 concise, conventional commit messages for this git diff. 
                    Return ONLY the 3 messages, one on each line, with no extra formatting, no markdown, and no bullet points.
                    
@@ -89,7 +92,7 @@ program
       console.log("🧐 Reviewing last commit with Gemini...");
 
       const response = await ai.models.generateContent({
-        model: "gemini-2.5-flash",
+        model: TARGET_MODEL,
         contents: `Review this git diff from the last commit. Provide a short, constructive code review. 
                    Highlight potential bugs, code quality improvements, or praise good practices.
                    Keep it concise and format it cleanly for a terminal.
@@ -124,7 +127,7 @@ program
       console.log("📜 Generating changelog with Gemini...");
 
       const response = await ai.models.generateContent({
-        model: "gemini-2.5-flash",
+        model: TARGET_MODEL,
         contents: `Convert these git commits into a clean, professional Markdown changelog. 
                    Group them logically (e.g., Features, Fixes, Chores) if possible.
                    
