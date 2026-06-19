@@ -24,7 +24,7 @@ You can install DevPulse globally on your machine using npm:
 ```bash
 npm install -g devpulse-cli-angad
 ```
-````
+
 
 ---
 
@@ -109,6 +109,6 @@ Building this tool was an incredible journey into bridging the gap between artif
 - **Registry Publishing:** Successfully navigated compiling TypeScript to JavaScript and publishing production-ready packages to the global npm registry (including bypassing 2FA security protocols).
 - **Git Internals:** Mastered staging nuances, memory clearing (`git rm -r --cached`), and correctly configuring `.gitignore` safely in live projects.
 
-```
+
 
 
